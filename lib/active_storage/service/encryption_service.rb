@@ -3,6 +3,7 @@ require "active_support/core_ext/numeric"
 
 module ActiveStorage
   class Service::EncryptionService < Service
+    attr_reader :primary
     delegate :delete, :delete_prefixed, :exist?, :url, to: :@primary
 
     def self.build(primary:, encryption_key:, name:, configurator:, **config)
