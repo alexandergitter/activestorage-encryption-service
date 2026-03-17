@@ -3,6 +3,7 @@ require "activestorage-encryption-service"
 require "active_storage/service/encryption_service"
 
 require "minitest/autorun"
+require "minitest/mock"
 
 FIXTURES_DIR = Pathname.new(__dir__).join("fixtures")
 

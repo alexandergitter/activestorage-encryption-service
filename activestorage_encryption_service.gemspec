@@ -25,6 +25,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "activestorage", ">= 7.0"
   spec.add_dependency "ruby-chacha20", ">= 0.1.0"
 
-  spec.add_development_dependency "rake", "~> 13.0"
-  spec.add_development_dependency "minitest", "~> 5.16"
+  spec.add_development_dependency "rake"
+  spec.add_development_dependency "minitest"
+  spec.add_development_dependency "minitest-mock"
 end
