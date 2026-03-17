@@ -11,6 +11,10 @@ class CipherIOTest < Minitest::Test
     @cio = ActiveStorageEncryptionService::CipherIO.new(io, cipher)
   end
 
+  def test_size_returns_header_plus_data_size
+    assert_equal ActiveStorageEncryptionService::HEADER_SIZE + @ciphertext.size, @cio.size
+  end
+
   def test_read_zero_length_returns_empty_string
     assert_equal "", @cio.read(0)
   end

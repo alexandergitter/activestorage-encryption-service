@@ -32,5 +32,9 @@ module ActiveStorageEncryptionService
       @header_bytes_read = 0
       @io.rewind
     end
+
+    def size
+      @io.size + HEADER_SIZE
+    end
   end
 end
